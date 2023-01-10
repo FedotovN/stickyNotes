@@ -53,14 +53,9 @@ body{
 }
 @keyframes remove{
     0%{
-        transform: scale(1);
-    }
-    50%{
-        opacity: 0;
+        opacity: 1;
     }
     100%{
-        transform: scale(0);
-        width: 0;
         opacity: 0;
     }
 }
@@ -286,4 +281,22 @@ body{
 }
 .popup_window .content button:hover{
     box-shadow: 5px 5px 0px var(--dark);;
+}
+@media(max-width: 700px){
+    .container{
+        justify-content: center;
+        align-items: center;
+    }
+    .item{
+        margin: 0;
+    }
+    .popup_window .content{
+        width: 300px;
+    }
+    .popup_window .content .header{
+        width: 300px;
+    }
+    .popup_window .content .title input, .popup_window .content .text textarea{
+        width: 300px;
+    }
 }
