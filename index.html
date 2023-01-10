@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do notes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <div class="popup_window disabled" id ="popup">
+        <div class="content">
+            <div class="header">
+                <h2>Creating new note</h2>
+                <i class="fa-solid fa-xmark" id="closePopup"></i>
+            </div>
+            <div class="title">
+                <p>Title: <p>
+                <input type="text" name="title" id="titleValue">
+            </div>
+            <div class="text">
+                <p>Text: <p>
+                <textarea id="textValue"></textarea>
+            </div>
+            <button id="saveBtn">Create new note!</button>
+        </div>
+    </div>
+    <div class="container" id = "container">
+        <div class="item container_item options_item_container">
+            <div class="content">
+                <div class="content_filter">
+                    <p>Show:</p>
+                    <div class="options">
+                        <div class="column">
+                        <div class="row">
+                            <label for="done">Done</label>
+                            <input type="radio"  name="filter" id="done">
+                        </div>
+                        <div class="row">
+                            <label for="process">In Process</label>
+                            <input type="radio"  name="filter" id="process">
+                        </div>
+                        </div>
+                        <div class="column">
+                        <div class="row">
+                            <label for="deadline">Deadline</label>
+                            <input type="radio"  name="filter" id="deadline">
+                        </div>
+                        <div class="row">
+                            <label for="all">All</label>
+                            <input type="radio"  name="filter" id="all" checked>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="new_note_button"  id="createBtn">
+                    <i class="fa-solid fa-plus"></i>
+                    <p>Click here to create new note</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/filter.js"></script>
+</body>
+</html>
